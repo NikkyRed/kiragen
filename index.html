@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kira Generalskaya — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:       #04040f;
+  --bg2:      #07071a;
+  --bg3:      #0b0b22;
+  --p:        #7c3aed;
+  --p2:       #a855f7;
+  --p3:       #d8b4fe;
+  --b:        #1d4ed8;
+  --b2:       #3b82f6;
+  --b3:       #93c5fd;
+  --text:     #e2e8f0;
+  --muted:    #64748b;
+  --dim:      #1e293b;
+  --glow-p:   rgba(168,85,247,0.35);
+  --glow-b:   rgba(59,130,246,0.35);
+  --border-p: rgba(168,85,247,0.3);
+  --border-b: rgba(59,130,246,0.25);
+  --r:        #ef4444;
+  --glow-r:   rgba(239,68,68,0.45);
+  --border-r: rgba(239,68,68,0.75);
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ─── GRID BACKGROUND ─── */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(124,58,237,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,.06) 1px, transparent 1px);
+  background-size:48px 48px;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;
+  inset:0 0 auto 0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:62px;
+  padding:0 60px;
+  background:rgba(4,4,15,.85);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border-p);
+}
+.nav-logo{
+  font-family:'Space Mono',monospace;
+  font-weight:700;
+  font-size:16px;
+  color:var(--p3);
+  text-decoration:none;
+  letter-spacing:.06em;
+}
+.nav-logo span{color:var(--b3)}
+.nav-links{display:flex;gap:32px;align-items:center;list-style:none}
+.nav-links a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-family:'Space Mono',monospace;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--p3)}
+.nav-cta{
+  background:transparent !important;
+  color:var(--p2) !important;
+  border:1px solid var(--p) !important;
+  padding:7px 20px !important;
+  box-shadow:0 0 12px var(--glow-p) !important;
+  transition:all .25s !important;
+}
+.nav-cta:hover{
+  background:rgba(124,58,237,.15) !important;
+  box-shadow:0 0 22px var(--glow-p) !important;
+  color:var(--p3) !important;
+}
+
+/* ─── HERO ─── */
+#hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  z-index:1;
+  padding:80px 40px 0;
+}
+.hero-orb{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+.hero-orb-1{
+  width:500px;height:500px;
+  background:radial-gradient(circle, rgba(124,58,237,.22) 0%, transparent 65%);
+  top:50%;left:40%;
+  transform:translate(-50%,-55%);
+}
+.hero-orb-2{
+  width:380px;height:380px;
+  background:radial-gradient(circle, rgba(29,78,216,.2) 0%, transparent 65%);
+  top:55%;left:60%;
+  transform:translate(-50%,-50%);
+}
+
+.hero-tag{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:.2em;
+  color:var(--b2);
+  border:1px solid var(--border-b);
+  padding:5px 14px;
+  margin-bottom:28px;
+  display:inline-block;
+  box-shadow:0 0 10px var(--glow-b);
+}
+
+.hero-name{
+  font-family:'Rajdhani',sans-serif;
+  font-weight:800;
+  font-size:clamp(72px,12vw,155px);
+  line-height:.88;
+  letter-spacing:.01em;
+  margin-bottom:12px;
+  position:relative;
+}
+.hero-name .line1{
+  display:block;
+  background:linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-name .line2{
+  display:block;
+  background:linear-gradient(135deg, #a855f7 0%, #60a5fa 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 0 24px rgba(168,85,247,.5));
+}
+
+.hero-roles{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:.16em;
+  color:var(--muted);
+  margin-top:20px;
+}
+.hero-roles em{color:var(--p2);font-style:normal;margin:0 8px}
+
+.hero-stats{
+  display:flex;
+  gap:0;
+  border:1px solid var(--border-p);
+  box-shadow:0 0 30px rgba(124,58,237,.12);
+  margin-top:48px;
+}
+.hero-stat{
+  padding:18px 36px;
+  border-right:1px solid var(--border-p);
+  text-align:center;
+  position:relative;
+  transition:background .25s;
+}
+.hero-stat:last-child{border-right:none}
+.hero-stat:hover{background:rgba(239,68,68,.05)}
+.hero-stat::before,.hero-stat::after{
+  content:'';position:absolute;
+  width:0;height:0;
+  transition:width .25s,height .25s;z-index:2;
+}
+.hero-stat::before{top:0;left:0;border-top:0 solid var(--r);border-left:0 solid var(--r)}
+.hero-stat::after{bottom:0;right:0;border-bottom:0 solid var(--r);border-right:0 solid var(--r)}
+.hero-stat:hover::before{width:14px;height:14px;border-top-width:2px;border-left-width:2px}
+.hero-stat:hover::after{width:14px;height:14px;border-bottom-width:2px;border-right-width:2px}
+.hero-stat-num{
+  font-family:'Rajdhani',sans-serif;
+  font-weight:800;
+  font-size:32px;
+  background:linear-gradient(135deg,#a855f7,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;
+}
+.hero-stat-lbl{
+  font-family:'Space Mono',monospace;
+  font-size:9px;
+  letter-spacing:.14em;
+  color:var(--muted);
+  margin-top:4px;
+  text-transform:uppercase;
+}
+
+.hero-scroll{
+  position:absolute;
+  bottom:34px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  animation:bob 2.4s ease-in-out infinite;
+}
+.scroll-arrow{
+  width:18px;
+  height:18px;
+  border-right:2px solid var(--p2);
+  border-bottom:2px solid var(--p2);
+  transform:rotate(45deg);
+  box-shadow:3px 3px 8px var(--glow-p);
+  filter:drop-shadow(0 0 6px var(--p2));
+}
+.scroll-arrow-2{
+  width:12px;
+  height:12px;
+  border-right:2px solid var(--p2);
+  border-bottom:2px solid var(--p2);
+  transform:rotate(45deg);
+  opacity:.4;
+  filter:drop-shadow(0 0 4px var(--p2));
+  margin-top:-10px;
+}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
+
+/* ─── LAYOUT ─── */
+.section{
+  max-width:1280px;
+  margin:0 auto;
+  padding:100px 60px;
+  position:relative;
+  z-index:1;
+}
+
+.divider{
+  border:none;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--border-p) 30%, var(--border-b) 70%, transparent);
+  max-width:1280px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+
+/* ─── SECTION TITLE ─── */
+.s-title{
+  font-family:'Rajdhani',sans-serif;
+  font-weight:800;
+  font-size:clamp(44px,6.5vw,86px);
+  line-height:.92;
+  letter-spacing:.01em;
+  margin-bottom:52px;
+}
+.s-title .w{color:var(--text)}
+.s-title .g{
+  background:linear-gradient(135deg,#a855f7,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* ─── GLOW CARD ─── */
+.gcard{
+  background:var(--bg2);
+  border:1px solid var(--border-p);
+  box-shadow:0 0 24px rgba(124,58,237,.08), inset 0 0 24px rgba(124,58,237,.03);
+  transition:box-shadow .3s, border-color .3s;
+  position:relative;
+}
+.gcard:hover{
+  box-shadow:0 0 0 1px var(--border-r), 0 0 28px var(--glow-r), 0 0 60px rgba(239,68,68,.12), inset 0 0 20px rgba(239,68,68,.04);
+  border-color:var(--border-r);
+}
+.gcard-b{
+  border-color:var(--border-b);
+  box-shadow:0 0 24px rgba(29,78,216,.08);
+}
+.gcard-b:hover{
+  box-shadow:0 0 0 1px var(--border-r), 0 0 28px var(--glow-r), 0 0 60px rgba(239,68,68,.12);
+  border-color:var(--border-r);
+}
+
+/* corner accent */
+.gcard::before,.gcard::after{
+  content:'';
+  position:absolute;
+  width:12px;height:12px;
+  transition:border-color .25s, width .25s, height .25s;
+  z-index:2;
+}
+.gcard::before{top:-1px;left:-1px;border-top:2px solid var(--p2);border-left:2px solid var(--p2)}
+.gcard::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--b2);border-right:2px solid var(--b2)}
+.gcard:hover::before{border-color:var(--r);width:18px;height:18px}
+.gcard:hover::after{border-color:var(--r);width:18px;height:18px}
+
+/* ─── ABOUT ─── */
+.about-bio{
+  max-width:760px;
+  font-size:16px;
+  color:#94a3b8;
+  line-height:1.85;
+  margin-bottom:44px;
+}
+.about-bio strong{color:var(--text);font-weight:600}
+.about-bio em{color:var(--p3);font-style:normal}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--border-p);
+  border:1px solid var(--border-p);
+  box-shadow:0 0 30px rgba(124,58,237,.1);
+}
+.about-cell{
+  background:var(--bg2);
+  padding:24px 20px;
+  position:relative;
+  transition:background .25s;
+}
+.about-cell::before,.about-cell::after{
+  content:'';position:absolute;
+  width:0;height:0;
+  transition:width .25s,height .25s;z-index:2;
+}
+.about-cell::before{top:0;left:0;border-top:0 solid var(--r);border-left:0 solid var(--r)}
+.about-cell::after{bottom:0;right:0;border-bottom:0 solid var(--r);border-right:0 solid var(--r)}
+.about-cell:hover{background:rgba(239,68,68,.04)}
+.about-cell:hover::before{width:14px;height:14px;border-top-width:2px;border-left-width:2px}
+.about-cell:hover::after{width:14px;height:14px;border-bottom-width:2px;border-right-width:2px}
+.about-lbl{
+  font-family:'Space Mono',monospace;
+  font-size:9px;
+  letter-spacing:.18em;
+  color:var(--b2);
+  margin-bottom:8px;
+  text-transform:uppercase;
+}
+.about-val{
+  font-size:14px;
+  font-weight:600;
+  color:var(--text);
+}
+.pulse{
+  display:inline-block;
+  width:7px;height:7px;
+  border-radius:50%;
+  background:#22c55e;
+  margin-right:6px;
+  box-shadow:0 0 8px #22c55e;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 8px #22c55e}50%{opacity:.5;box-shadow:0 0 3px #22c55e}}
+
+/* ─── WHY ─── */
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.why-card{
+  padding:36px 30px;
+}
+.why-n{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--p2);
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.why-n::before{
+  content:'';
+  display:inline-block;
+  width:24px;height:1px;
+  background:var(--p2);
+  box-shadow:0 0 6px var(--p2);
+}
+.why-card h3{
+  font-size:17px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:12px;
+}
+.why-card p{
+  font-size:13.5px;
+  color:#64748b;
+  line-height:1.75;
+}
+.why-card p em{color:var(--p3);font-style:normal;font-weight:500}
+
+/* ─── EXPERIENCE ─── */
+.exp-list{position:relative}
+.exp-line{
+  position:absolute;
+  left:180px;
+  top:0;bottom:0;
+  width:1px;
+  background:linear-gradient(180deg, transparent, var(--border-p) 10%, var(--border-b) 90%, transparent);
+}
+.exp-item{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:0;
+  padding:40px 0;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  position:relative;
+  transition:background .25s;
+  border-radius:2px;
+}
+.exp-item:first-child{padding-top:0}
+.exp-item:hover{background:rgba(239,68,68,.03)}
+.exp-item::before,.exp-item::after{
+  content:'';
+  position:absolute;
+  width:0;height:0;
+  transition:width .3s ease, height .3s ease, border-color .25s;
+  z-index:2;
+}
+.exp-item::before{top:0;left:0;border-top:0 solid var(--r);border-left:0 solid var(--r)}
+.exp-item::after{bottom:0;right:0;border-bottom:0 solid var(--r);border-right:0 solid var(--r)}
+.exp-item:hover::before{width:20px;height:20px;border-top-width:2px;border-left-width:2px;box-shadow:0 0 8px var(--glow-r)}
+.exp-item:hover::after{width:20px;height:20px;border-bottom-width:2px;border-right-width:2px;box-shadow:0 0 8px var(--glow-r)}
+.exp-dot{
+  position:absolute;
+  left:175px;
+  top:42px;
+  width:11px;height:11px;
+  border-radius:50%;
+  background:var(--p);
+  border:2px solid var(--p3);
+  box-shadow:0 0 12px var(--glow-p);
+  z-index:2;
+}
+.exp-item:first-child .exp-dot{background:var(--b);border-color:var(--b3);box-shadow:0 0 12px var(--glow-b)}
+.exp-date{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  color:var(--p2);
+  padding-top:4px;
+  letter-spacing:.04em;
+  line-height:1.5;
+  padding-right:32px;
+}
+.exp-content{padding-left:40px}
+.exp-now{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  color:#22c55e;
+  border:1px solid rgba(34,197,94,.25);
+  background:rgba(34,197,94,.07);
+  padding:3px 10px;
+  margin-bottom:12px;
+  box-shadow:0 0 10px rgba(34,197,94,.15);
+}
+.exp-role{
+  font-family:'Rajdhani',sans-serif;
+  font-size:20px;
+  font-weight:800;
+  color:var(--text);
+  margin-bottom:4px;
+}
+.exp-co{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  color:var(--muted);
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.exp-ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.exp-ul li{
+  font-size:13.5px;
+  color:#64748b;
+  padding-left:20px;
+  position:relative;
+  line-height:1.65;
+}
+.exp-ul li::before{
+  content:'▸';
+  position:absolute;
+  left:0;
+  color:var(--p2);
+  font-size:11px;
+  top:2px;
+}
+.exp-ul li b{color:#cbd5e1;font-weight:600}
+
+/* ─── SKILLS ─── */
+.skills-wrap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.skills-card{padding:36px}
+.skills-card h3{
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:.14em;
+  color:var(--b2);
+  text-transform:uppercase;
+  margin-bottom:22px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.skills-card h3::after{
+  content:'';
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,var(--border-b),transparent);
+}
+
+.tag-list{display:flex;flex-wrap:wrap;gap:8px}
+.tag{
+  font-size:12px;
+  font-weight:500;
+  color:#94a3b8;
+  border:1px solid var(--dim);
+  padding:6px 13px;
+  background:transparent;
+  cursor:default;
+  font-family:'Space Grotesk',sans-serif;
+  letter-spacing:.02em;
+  transition:all .2s;
+}
+.tag:hover{
+  border-color:var(--p2);
+  color:var(--p3);
+  box-shadow:0 0 10px rgba(168,85,247,.2);
+  background:rgba(168,85,247,.06);
+}
+
+.tool-rows{display:flex;flex-direction:column;gap:14px}
+.tool-row{}
+.tool-lbl{
+  font-family:'Space Mono',monospace;
+  font-size:9px;
+  letter-spacing:.16em;
+  color:var(--p2);
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+.tool-val{font-size:13px;color:#64748b;line-height:1.5}
+
+/* ─── PROOF OF WORK ─── */
+.pow-project-hd{
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--border-p);
+}
+.pow-proj-name{
+  font-family:'Rajdhani',sans-serif;
+  font-size:24px;
+  font-weight:800;
+  color:var(--text);
+  letter-spacing:.02em;
+}
+.pow-proj-role{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  color:var(--p2);
+}
+.pow-proj-meta{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  color:var(--muted);
+  margin-left:auto;
+}
+.pow-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.pow-card{
+  padding:22px 20px 18px;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  transition:box-shadow .3s, border-color .3s, transform .2s;
+}
+.pow-card:hover{
+  transform:translateY(-2px);
+}
+.pow-card-wide{
+  grid-column:span 2;
+}
+.pow-num{
+  font-family:'Rajdhani',sans-serif;
+  font-size:30px;
+  font-weight:800;
+  background:linear-gradient(135deg,#a855f7,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;
+}
+.pow-label{
+  font-family:'Space Mono',monospace;
+  font-size:9px;
+  letter-spacing:.12em;
+  color:var(--b2);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.pow-desc{
+  font-size:12px;
+  color:#64748b;
+  line-height:1.6;
+  flex:1;
+}
+.pow-platform{
+  font-family:'Space Mono',monospace;
+  font-size:9px;
+  letter-spacing:.1em;
+  color:var(--p2);
+  margin-top:8px;
+  opacity:.6;
+}
+
+/* ─── LANGUAGES ─── */
+.lang-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.lang-card{
+  padding:28px 20px;
+  text-align:center;
+}
+.lang-name{
+  font-family:'Rajdhani',sans-serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:6px;
+}
+.lang-lvl{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.08em;
+  color:var(--b2);
+}
+
+/* ─── CONTACT ─── */
+#contact{
+  text-align:center;
+  padding:120px 60px;
+  position:relative;
+  z-index:1;
+}
+.contact-orb{
+  position:absolute;
+  width:600px;height:300px;
+  border-radius:50%;
+  background:radial-gradient(ellipse, rgba(124,58,237,.12) 0%, transparent 70%);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.contact-tag{
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.22em;
+  color:var(--b2);
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.contact-big{display:none}
+.contact-scramble-wrap{
+  display:block;
+  width:100%;
+  margin-bottom:44px;
+  text-align:center;
+}
+#scramble-contact{
+  font-family:'Space Mono',monospace;
+  font-weight:700;
+  font-size:clamp(42px,7.5vw,108px);
+  letter-spacing:.06em;
+  color:var(--p2);
+  border:1px solid var(--border-p);
+  padding:24px 56px;
+  display:inline-block;
+  box-shadow:0 0 40px var(--glow-p), inset 0 0 30px rgba(124,58,237,.05);
+  text-shadow:0 0 28px rgba(168,85,247,.55);
+  line-height:1.05;
+  transition:box-shadow .3s, border-color .3s;
+  position:relative;
+  max-width:90vw;
+}
+#scramble-contact::before,#scramble-contact::after{
+  content:'';position:absolute;
+  width:14px;height:14px;
+  transition:border-color .25s,width .25s,height .25s;
+}
+#scramble-contact::before{top:-1px;left:-1px;border-top:2px solid var(--p2);border-left:2px solid var(--p2)}
+#scramble-contact::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--b2);border-right:2px solid var(--b2)}
+#scramble-contact:hover{
+  box-shadow:0 0 0 1px var(--border-r),0 0 50px var(--glow-r),inset 0 0 20px rgba(239,68,68,.04);
+  border-color:var(--border-r);
+}
+#scramble-contact:hover::before{border-color:var(--r);width:20px;height:20px}
+#scramble-contact:hover::after{border-color:var(--r);width:20px;height:20px}
+.contact-email{
+  font-family:'Space Mono',monospace;
+  font-size:16px;
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid var(--p2);
+  padding-bottom:3px;
+  display:inline-block;
+  transition:all .2s;
+  letter-spacing:.02em;
+}
+.contact-email:hover{color:var(--p3);box-shadow:0 4px 12px var(--glow-p)}
+.contact-links{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:28px;
+}
+.c-link{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 20px;
+  border:1px solid var(--border-p);
+  color:var(--muted);
+  text-decoration:none;
+  font-family:'Space Mono',monospace;
+  font-size:11px;
+  letter-spacing:.06em;
+  background:transparent;
+  transition:all .2s;
+}
+.c-link:hover{
+  border-color:var(--p2);
+  color:var(--p3);
+  box-shadow:0 0 14px var(--glow-p);
+  background:rgba(168,85,247,.07);
+}
+
+/* ─── FOOTER ─── */
+footer{
+  border-top:1px solid rgba(255,255,255,.04);
+  padding:20px 60px;
+  text-align:center;
+  font-family:'Space Mono',monospace;
+  font-size:10px;
+  letter-spacing:.14em;
+  color:#1e293b;
+  position:relative;
+  z-index:1;
+}
+footer em{color:var(--p2);font-style:normal}
+
+/* ─── REVEAL ─── */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}
+.rv.d2{transition-delay:.2s}
+.rv.d3{transition-delay:.3s}
+
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .section{padding:64px 20px}
+  .about-grid,.lang-grid{grid-template-columns:1fr 1fr}
+  .why-grid,.skills-wrap{grid-template-columns:1fr}
+  .exp-line,.exp-dot{display:none}
+  .exp-item{grid-template-columns:1fr;gap:4px}
+  .exp-content{padding-left:0}
+  .hero-stats{flex-wrap:wrap}
+  #contact{padding:80px 20px}
+  .pow-grid{grid-template-columns:1fr 1fr}
+  .pow-card-wide{grid-column:span 2}
+  .pow-proj-meta{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">KG<span>_</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#why">Why me</a></li>
+    <li><a href="#exp">Experience</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-tag">GLOBAL HEAD OF SOCIAL MEDIA · 9 YEARS IN CRYPTO</div>
+  <div id="scramble-hero" style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.22em;color:#a855f7;margin-bottom:16px;min-height:20px;text-shadow:0 0 14px rgba(168,85,247,.6);"></div>
+
+  <div class="hero-name">
+    <span class="line1">I'M</span>
+    <span class="line2">KIRA</span>
+  </div>
+
+  <div class="hero-roles">
+    Social Strategy <em>/</em> Analytics <em>/</em> Multi-Platform Growth
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">9+</div>
+      <div class="hero-stat-lbl">Years in Crypto</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">30M+</div>
+      <div class="hero-stat-lbl">Audience Reach</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">15k</div>
+      <div class="hero-stat-lbl">Peak live viewers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4+</div>
+      <div class="hero-stat-lbl">Languages</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-arrow"></div>
+    <div class="scroll-arrow-2"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="s-title rv"><span class="w">ABOUT </span><span class="g">ME</span></div>
+  <p class="about-bio rv d1">
+    Based in <strong>Belgrade, Serbia</strong> — 9 years deep in crypto and Web3, 6 years in digital marketing. I build and lead social media functions for crypto and gamedev products at scale — from strategy architecture to team management and measurable business results.<br><br>
+    My approach is analytics-first: I work with hypotheses, test against data, and adjust based on what actually performs. At Blum, one content post drove <em>300K+ new wallet connections</em> directly attributed to the campaign. I've managed teams of <em>5+ people</em>, run cross-regional operations across <strong>Global and CIS markets — Turkey, Brazil, Africa, Asia, and beyond</strong>, and operated across a combined social footprint of <em>30M+ followers</em> on a single project.
+  </p>
+  <div class="about-grid rv d2">
+    <div class="about-cell">
+      <div class="about-lbl">Location</div>
+      <div class="about-val">Belgrade, Serbia</div>
+    </div>
+    <div class="about-cell">
+      <div class="about-lbl">Role</div>
+      <div class="about-val">Global Head of Social Media</div>
+    </div>
+    <div class="about-cell">
+      <div class="about-lbl">In crypto since</div>
+      <div class="about-val">2017</div>
+    </div>
+    <div class="about-cell">
+      <div class="about-lbl">Status</div>
+      <div class="about-val"><span class="pulse"></span>Available</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- WHY ME -->
+<div class="section" id="why">
+  <div class="s-title rv"><span class="w">WHY PROJECTS<br></span><span class="g">CHOOSE ME</span></div>
+  <div class="why-grid">
+    <div class="why-card gcard rv">
+      <div class="why-n">01</div>
+      <h3>Analytics-driven, not intuition-driven</h3>
+      <p>I build content strategies around <em>hypotheses and data</em> — test, measure, adjust. One campaign at Blum drove <em>300K+ new wallet connections</em>. That's the kind of result that comes from treating SMM as a growth function, not a content calendar.</p>
+    </div>
+    <div class="why-card gcard rv d1">
+      <div class="why-n">02</div>
+      <h3>Team & budget management</h3>
+      <p>Led teams of <em>5+ people</em> across multiple markets simultaneously. Managed campaign budgets up to <em>$10K/month</em>. Global and CIS operations — Turkey, Brazil, Africa, Asia, and Russian-speaking markets — one coherent strategy, locally adapted.</p>
+    </div>
+    <div class="why-card gcard rv d2">
+      <div class="why-n">03</div>
+      <h3>9 years crypto-native</h3>
+      <p>Web3 isn't a vertical I'm learning — it's where I've operated since 2017. <em>Product cycles, market sentiment, launch dynamics</em> — I know the context before the brief arrives.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<div class="section" id="exp">
+  <div class="s-title rv"><span class="w">WORK </span><span class="g">EXPERIENCE</span></div>
+  <div class="exp-list">
+    <div class="exp-line"></div>
+
+    <div class="exp-item rv">
+      <div class="exp-dot"></div>
+      <div class="exp-date">Jun 2025<br>Present</div>
+      <div class="exp-content">
+        <div class="exp-now"><span class="pulse"></span>CURRENT</div>
+        <div class="exp-role">Strategic SMM Consulting</div>
+        <div class="exp-co">Multiple Web3 Teams · Remote</div>
+        <ul class="exp-ul">
+          <li>Social media strategy and execution for several Web3 teams in parallel — crypto, DeFi, and founder personal brands</li>
+          <li>End-to-end brand systems: positioning, narrative architecture, tone of voice, scalable content models</li>
+          <li>Analytics-first frameworks tracking engagement, reach, follower quality, and inbound business impact</li>
+          <li>Hypothesis-driven content cycles: test formats, measure performance, iterate based on data</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item rv">
+      <div class="exp-dot"></div>
+      <div class="exp-date">Jun 2025<br>Dec 2025</div>
+      <div class="exp-content">
+        <div class="exp-role">Growth Marketing Manager</div>
+        <div class="exp-co">ACSG · Montenegro</div>
+        <ul class="exp-ul">
+          <li>End-to-end brand growth: paid placements, influencer marketing, partnerships — one unified system</li>
+          <li>Influencer/creator campaigns full cycle: outreach, negotiations, briefing, publishing, post-campaign analysis</li>
+          <li>Strategic partnerships and cross-brand collaborations expanding reach and unlocking new channels</li>
+          <li>Founder communication aligned with product launches, GTM narratives, and brand positioning</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item rv">
+      <div class="exp-dot"></div>
+      <div class="exp-date">Oct 2024<br>Jun 2025</div>
+      <div class="exp-content">
+        <div class="exp-role">SMM Manager</div>
+        <div class="exp-co">Blum · Dubai</div>
+        <ul class="exp-ul">
+          <li>Multi-platform social strategies across LinkedIn, Facebook, X, Telegram, and Instagram — total project audience <b>30M+ followers</b></li>
+          <li>Educational content campaign on Memepad drove <b>300K+ new wallet connections</b> directly attributed to the post</li>
+          <li>Hosted livestreams via StreamYard — <b>peak 15,000+ viewers</b> in a single session; managed $10K/month campaign budgets</li>
+          <li>Led a team of <b>5+ people</b>; coordinated regional managers across Global and CIS markets — Turkey, Brazil, Africa, Asia</li>
+          <li>In-app events and card mechanics designed to boost retention; push notifications with product analysts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item rv">
+      <div class="exp-dot"></div>
+      <div class="exp-date">Apr 2024<br>Nov 2024</div>
+      <div class="exp-content">
+        <div class="exp-role">SMM & Marketing Head</div>
+        <div class="exp-co">GOTBIT Hedge Fund · Lisbon</div>
+        <ul class="exp-ul">
+          <li>Social media strategies for crypto and gamedev projects across Facebook, Telegram, X, Discord, TikTok</li>
+          <li>Full-cycle creator campaigns: sourcing, negotiations, briefing, publishing, performance reporting</li>
+          <li>Ad budget management with focus on ROI; performance tracked via UTM tags and social analytics</li>
+          <li>Content production end-to-end — scripting, visual direction, post-production (Photoshop, Final Cut Pro)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item rv">
+      <div class="exp-dot"></div>
+      <div class="exp-date">Mar 2022<br>Nov 2024</div>
+      <div class="exp-content">
+        <div class="exp-role">SMM & Content Head</div>
+        <div class="exp-co">Choise.com (Hashcats) · Dubai</div>
+        <ul class="exp-ul">
+          <li>Launched Hashcats from zero — <b>grew to 50K+ members</b>, built brand voice and full content system from scratch</li>
+          <li>Developed distinct tone of voice for meme-oriented ecosystem projects — strong organic traction and retention</li>
+          <li>Viral campaigns, AMA sessions, and platform-native activations across Twitter, Telegram, and Discord</li>
+          <li>Supported multiple token launches; built internal processes for content planning, scheduling, and analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item rv">
+      <div class="exp-dot"></div>
+      <div class="exp-date">Nov 2020<br>Aug 2024</div>
+      <div class="exp-content">
+        <div class="exp-role">Community Manager</div>
+        <div class="exp-co">MY.GAMES · Amsterdam</div>
+        <ul class="exp-ul">
+          <li>Managed official social channels for gamedev titles: American Dad! Apocalypse Soon, Zero City, Hustle Castle — Facebook, VK, Discord, TikTok</li>
+          <li>Built and ran TikTok presence for Zero City and Hustle Castle from launch</li>
+          <li>Moderation team management, user support workflows, community contests, weekly analytics reporting</li>
+          <li>Developed and expanded creator and blogger programs driving organic reach for mobile titles</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PROOF OF WORK -->
+<div class="section" id="work">
+  <div class="s-title rv"><span class="w">PROOF OF </span><span class="g">WORK</span></div>
+
+  <!-- BLUM -->
+  <div class="pow-project rv">
+    <div class="pow-project-hd">
+      <div class="pow-proj-name">Blum Crypto</div>
+      <div class="pow-proj-role">SMM Manager · Oct 2024 – Jun 2025</div>
+      <div class="pow-proj-meta">Telegram · X · YouTube</div>
+    </div>
+    <div class="pow-grid">
+
+      <a href="https://x.com/blumcrypto/status/1899113403928498367" target="_blank" class="pow-card gcard">
+        <div class="pow-num">1.9M</div>
+        <div class="pow-label">Views</div>
+        <div class="pow-desc">Solana trading launch thread — concept, copy, visual direction. +18K likes · +5.3K reposts</div>
+        <div class="pow-platform">X.com</div>
+      </a>
+
+      <a href="https://x.com/blumcrypto/status/1921248872308814316" target="_blank" class="pow-card gcard">
+        <div class="pow-num">1.1M</div>
+        <div class="pow-label">Views</div>
+        <div class="pow-desc">Blum × BNB Chain campaign announcement. 10K+ likes, surge in bot onboarding</div>
+        <div class="pow-platform">X.com</div>
+      </a>
+
+      <a href="https://x.com/blumcrypto/status/1891819970700386790" target="_blank" class="pow-card gcard">
+        <div class="pow-num">707K</div>
+        <div class="pow-label">Views</div>
+        <div class="pow-desc">Solana support feature launch. Clean no-frills product copy · +4.4K likes</div>
+        <div class="pow-platform">X.com</div>
+      </a>
+
+      <a href="https://x.com/blumcrypto/status/1899842004244222427" target="_blank" class="pow-card gcard">
+        <div class="pow-num">457K</div>
+        <div class="pow-label">Views</div>
+        <div class="pow-desc">Pre-drop teaser. ASCII pattern-breaker format — 1.3K comments · 5.6K likes</div>
+        <div class="pow-platform">X.com</div>
+      </a>
+
+      <a href="https://t.me/blumcrypto/612" target="_blank" class="pow-card gcard gcard-b">
+        <div class="pow-num">2M</div>
+        <div class="pow-label">Views · 300K+ wallets connected</div>
+        <div class="pow-desc">Educational bullrun post tied to Trump token hype. Soft CTA for Memepad — directly attributed to <b style="color:#93c5fd">300K+ new wallet connections</b> in the app</div>
+        <div class="pow-platform">Telegram</div>
+      </a>
+
+      <a href="https://t.me/blumcrypto/665" target="_blank" class="pow-card gcard gcard-b">
+        <div class="pow-num">1.9M</div>
+        <div class="pow-label">Views · 40K reactions</div>
+        <div class="pow-desc">Community announcement post — copywriting and creative positioning</div>
+        <div class="pow-platform">Telegram</div>
+      </a>
+
+      <a href="https://t.me/blumcrypto/644" target="_blank" class="pow-card gcard gcard-b">
+        <div class="pow-num">1.5M</div>
+        <div class="pow-label">Views · 20K+ reactions</div>
+        <div class="pow-desc">Engagement post addressing user frustration — tone that held motivation while being honest</div>
+        <div class="pow-platform">Telegram</div>
+      </a>
+
+      <a href="https://www.youtube.com/@blumcrypto/streams" target="_blank" class="pow-card gcard gcard-b">
+        <div class="pow-num">15K</div>
+        <div class="pow-label">Peak live viewers</div>
+        <div class="pow-desc">End-to-end AMA management — scripting, hosting coordination, StreamYard production</div>
+        <div class="pow-platform">YouTube Live</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- DONOT -->
+  <div class="pow-project rv" style="margin-top:52px;">
+    <div class="pow-project-hd">
+      <div class="pow-proj-name">Donot (by Blum)</div>
+      <div class="pow-proj-role">Full-cycle SMM · Brand Voice · TOV</div>
+      <div class="pow-proj-meta">Telegram · 763K subscribers</div>
+    </div>
+    <div class="pow-grid">
+      <a href="https://t.me/donotgame" target="_blank" class="pow-card gcard pow-card-wide">
+        <div class="pow-num">763K</div>
+        <div class="pow-label">Subscribers · Full-cycle SMM ownership</div>
+        <div class="pow-desc">End-to-end content system for a 763K+ subscriber channel: brand voice architecture, tone of voice development, copywriting, visual concept direction — built and maintained solo</div>
+        <div class="pow-platform">Telegram</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- STRATEGY -->
+  <div class="pow-project rv" style="margin-top:52px;">
+    <div class="pow-project-hd">
+      <div class="pow-proj-name">Strategy Document</div>
+      <div class="pow-proj-role">User Retention Strategy · Blum · 2025</div>
+      <div class="pow-proj-meta">Full document</div>
+    </div>
+    <div class="pow-grid">
+      <a href="https://docs.google.com/document/d/11XVqi90s8G1X-l7aWWZ3df3DooQ-5GWj3el_btTIvHg/edit?tab=t.0#heading=h.7gywar7tklcy" target="_blank" class="pow-card gcard pow-card-wide">
+        <div class="pow-num">Strategy</div>
+        <div class="pow-label">User Retention · Blum · 2025</div>
+        <div class="pow-desc">Full retention strategy written for Blum — platform analysis, audience segmentation, content mechanics, re-engagement frameworks, measurable KPIs across channels</div>
+        <div class="pow-platform">Google Docs · View document →</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ZERO CITY -->
+  <div class="pow-project rv" style="margin-top:52px;">
+    <div class="pow-project-hd">
+      <div class="pow-proj-name">Zero City · MY.GAMES</div>
+      <div class="pow-proj-role">Video content — concept & music direction</div>
+      <div class="pow-proj-meta">TikTok</div>
+    </div>
+    <div class="pow-grid">
+      <a href="https://www.tiktok.com/@zerocitygame/video/7223030183035489582" target="_blank" class="pow-card gcard">
+        <div class="pow-num">TikTok</div>
+        <div class="pow-label">Video #1</div>
+        <div class="pow-desc">Visual tone and music selection aligned with the game's dystopian atmosphere</div>
+        <div class="pow-platform">TikTok</div>
+      </a>
+      <a href="https://www.tiktok.com/@zerocitygame/video/7250497315213937966" target="_blank" class="pow-card gcard">
+        <div class="pow-num">TikTok</div>
+        <div class="pow-label">Video #2</div>
+        <div class="pow-desc">Concept development — emotional depth adapted to TikTok's fast-paced format</div>
+        <div class="pow-platform">TikTok</div>
+      </a>
+      <a href="https://www.tiktok.com/@zerocitygame/video/7276414298983796011" target="_blank" class="pow-card gcard">
+        <div class="pow-num">TikTok</div>
+        <div class="pow-label">Video #3</div>
+        <div class="pow-desc">Video concept and original music selection for mobile gamedev brand</div>
+        <div class="pow-platform">TikTok</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<hr class="divider">
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+  <div class="s-title rv"><span class="w">SKILLS & </span><span class="g">TOOLKIT</span></div>
+  <div class="skills-wrap">
+    <div class="skills-card gcard rv">
+      <h3>Core Skills</h3>
+      <div class="tag-list">
+        <span class="tag">Social Media Strategy</span>
+        <span class="tag">Multi-Platform Growth</span>
+        <span class="tag">Brand Voice Systems</span>
+        <span class="tag">Data-Driven Campaigns</span>
+        <span class="tag">Analytics & Performance</span>
+        <span class="tag">Content Systems</span>
+        <span class="tag">Campaign Management</span>
+        <span class="tag">Copywriting</span>
+        <span class="tag">Crisis & Reputation</span>
+        <span class="tag">Livestream Production</span>
+        <span class="tag">Personal Brand Strategy</span>
+        <span class="tag">In-App Events</span>
+        <span class="tag">Push Notifications</span>
+        <span class="tag">Global Team Coordination</span>
+      </div>
+    </div>
+    <div class="skills-card gcard gcard-b rv d1">
+      <h3>Tools & Platforms</h3>
+      <div class="tool-rows">
+        <div class="tool-row">
+          <div class="tool-lbl">Platforms</div>
+          <div class="tool-val">Facebook · Instagram · YouTube · TikTok · Telegram · LinkedIn · X · Reddit · Discord</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-lbl">Analytics</div>
+          <div class="tool-val">Metricool · UTM Analytics · Native Platform Analytics · Amplifr · KUKU.IO</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-lbl">Video & Design</div>
+          <div class="tool-val">Adobe Photoshop · Final Cut Pro · Premiere Pro · StreamYard · Vegas Pro</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-lbl">Project Mgmt</div>
+          <div class="tool-val">Notion · Jira · Trello · Confluence</div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-lbl">AI</div>
+          <div class="tool-val">Claude · ChatGPT · Midjourney</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- LANGUAGES -->
+<div class="section" style="padding-top:72px;padding-bottom:72px;">
+  <div class="s-title rv"><span class="w">LANG</span><span class="g">UAGES</span></div>
+  <div class="lang-grid">
+    <div class="lang-card gcard rv">
+      <div class="lang-name">Russian</div>
+      <div class="lang-lvl">Native</div>
+    </div>
+    <div class="lang-card gcard rv d1">
+      <div class="lang-name">English</div>
+      <div class="lang-lvl">Professional</div>
+    </div>
+    <div class="lang-card gcard gcard-b rv d2">
+      <div class="lang-name">Deutsch</div>
+      <div class="lang-lvl">Limited Working</div>
+    </div>
+    <div class="lang-card gcard gcard-b rv d3">
+      <div class="lang-name">Italiano</div>
+      <div class="lang-lvl">Limited Working</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-orb"></div>
+  <div class="contact-scramble-wrap">
+    <div id="scramble-contact">LET'S WORK</div>
+  </div>
+  <a href="mailto:kira.generalskaya.inn@gmail.com" class="contact-email">kira.generalskaya.inn@gmail.com</a>
+  <div class="contact-links">
+    <a href="mailto:kira.generalskaya.inn@gmail.com" class="c-link">[ EMAIL ]</a>
+    <a href="https://www.linkedin.com/in/kira-generalskaya" target="_blank" class="c-link">[ LINKEDIN ]</a>
+  </div>
+</section>
+
+<footer>ALL MATERIALS <em>PROTECTED</em> BY KIRA GENERALSKAYA</footer>
+
+<script>
+const rv = document.querySelectorAll('.rv');
+const ob = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('on') }), {threshold:.08});
+rv.forEach(el => ob.observe(el));
+
+// ── SCRAMBLE ENGINE ──
+const chars = '!@#$%&<>?/|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+function scrambleTo(el, target, onDone) {
+  let iters = 0;
+  const maxIters = target.length * 4;
+  const iv = setInterval(() => {
+    el.textContent = target.split('').map((ch, i) => {
+      if (ch === ' ') return ' ';
+      if (i < Math.floor(iters / 4)) return ch;
+      return chars[Math.floor(Math.random() * chars.length)];
+    }).join('');
+    if (++iters > maxIters) {
+      el.textContent = target;
+      clearInterval(iv);
+      if (onDone) setTimeout(onDone, 2200);
+    }
+  }, 38);
+}
+
+// ── HERO SCRAMBLE (cycling) ──
+const heroEl = document.getElementById('scramble-hero');
+const scramblePhrases = [
+  'SOCIAL MEDIA STRATEGIST',
+  'MULTI-PLATFORM GROWTH',
+  'BRAND VOICE ARCHITECT',
+  'WEB3 NATIVE · 9 YEARS IN',
+  'DATA-DRIVEN CAMPAIGNS',
+  '30M+ AUDIENCE REACH',
+];
+let phraseIdx = 0;
+function nextPhrase() {
+  const target = scramblePhrases[phraseIdx];
+  phraseIdx = (phraseIdx + 1) % scramblePhrases.length;
+  scrambleTo(heroEl, target, nextPhrase);
+}
+nextPhrase();
+
+// ── CONTACT SCRAMBLE (on scroll into view, one-time) ──
+const contactEl = document.getElementById('scramble-contact');
+const contactPhrases = ["LET'S WORK", "GET IN TOUCH", "LET'S BUILD"];
+let contactIdx = 0;
+let contactStarted = false;
+
+function nextContactPhrase() {
+  contactIdx = (contactIdx + 1) % contactPhrases.length;
+  scrambleTo(contactEl, contactPhrases[contactIdx], nextContactPhrase);
+}
+
+const contactOb = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !contactStarted) {
+      contactStarted = true;
+      scrambleTo(contactEl, contactPhrases[0], nextContactPhrase);
+    }
+  });
+}, {threshold: 0.3});
+contactOb.observe(contactEl);
+</script>
+</body>
+</html>
