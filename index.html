@@ -19,7 +19,7 @@
   --b2:       #3b82f6;
   --b3:       #93c5fd;
   --text:     #e2e8f0;
-  --muted:    #64748b;
+  --muted:    #a3aec0;
   --dim:      #1e293b;
   --glow-p:   rgba(168,85,247,0.35);
   --glow-b:   rgba(59,130,246,0.35);
@@ -330,7 +330,7 @@ nav{
 .about-bio{
   max-width:760px;
   font-size:16px;
-  color:#94a3b8;
+  color:#c3ccd9;
   line-height:1.85;
   margin-bottom:44px;
 }
@@ -419,7 +419,7 @@ nav{
 }
 .why-card p{
   font-size:13.5px;
-  color:#64748b;
+  color:#b8c2d1;
   line-height:1.75;
 }
 .why-card p em{color:var(--p3);font-style:normal;font-weight:500}
@@ -510,7 +510,7 @@ nav{
 .exp-ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .exp-ul li{
   font-size:13.5px;
-  color:#64748b;
+  color:#b8c2d1;
   padding-left:20px;
   position:relative;
   line-height:1.65;
@@ -554,7 +554,7 @@ nav{
 .tag{
   font-size:12px;
   font-weight:500;
-  color:#94a3b8;
+  color:#c3ccd9;
   border:1px solid var(--dim);
   padding:6px 13px;
   background:transparent;
@@ -580,7 +580,7 @@ nav{
   margin-bottom:5px;
   text-transform:uppercase;
 }
-.tool-val{font-size:13px;color:#64748b;line-height:1.5}
+.tool-val{font-size:13px;color:#b8c2d1;line-height:1.5}
 
 /* ─── PROOF OF WORK ─── */
 .pow-project-hd{
@@ -652,7 +652,7 @@ nav{
 }
 .pow-desc{
   font-size:12px;
-  color:#64748b;
+  color:#b8c2d1;
   line-height:1.6;
   flex:1;
 }
@@ -797,7 +797,7 @@ footer{
   font-family:'Space Mono',monospace;
   font-size:10px;
   letter-spacing:.14em;
-  color:#1e293b;
+  color:#64748b;
   position:relative;
   z-index:1;
 }
@@ -825,6 +825,77 @@ footer em{color:var(--p2);font-style:normal}
   .pow-card-wide{grid-column:span 2}
   .pow-proj-meta{margin-left:0;width:100%}
 }
+
+/* ─── READABILITY v6 ─── */
+.nav-links a{font-size:12px;color:#c3ccd9}
+.hero-tag{font-size:12.5px;color:#93c5fd}
+.hero-roles{font-size:13px;color:#c3ccd9}
+.hero-stat-lbl{font-size:11px;color:#b8c2d1;letter-spacing:.1em}
+.about-bio{font-size:17px}
+.about-lbl{font-size:11px;color:#93c5fd;font-weight:700}
+.about-val{font-size:15px}
+.why-n{font-size:12px;color:#c084fc}
+.why-card p{font-size:15px;line-height:1.7}
+.exp-date{font-size:12.5px;color:#c084fc;font-weight:700}
+.exp-now{font-size:11.5px}
+.exp-co{font-size:12px;color:#b8c2d1;font-weight:700;letter-spacing:.06em}
+.exp-ul li{font-size:15px;line-height:1.65}
+.exp-ul li b{color:#f1f5f9}
+.skills-card h3{font-size:12.5px;color:#93c5fd;font-weight:700}
+.tag{font-size:13.5px;color:#d6dde8}
+.tool-lbl{font-size:11px;color:#c084fc;font-weight:700}
+.tool-val{font-size:14.5px}
+.pow-proj-role,.pow-proj-meta{font-size:12px;font-weight:700}
+.pow-proj-role{color:#c084fc}
+.pow-label{font-size:11px;color:#93c5fd;font-weight:700}
+.pow-desc{font-size:14px;line-height:1.6}
+.pow-platform{font-size:11px;opacity:.9;color:#c084fc}
+.lang-lvl{font-size:12px;color:#93c5fd}
+.contact-tag{font-size:12px;color:#93c5fd}
+.c-link{font-size:12.5px;color:#d6dde8}
+footer{font-size:11.5px}
+
+/* ─── HR SUMMARY ─── */
+.hr-btn{position:fixed;right:24px;bottom:24px;z-index:900;font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#7c3aed,#2563eb);border:0;padding:13px 20px;cursor:pointer;box-shadow:0 8px 30px rgba(124,58,237,.45);display:flex;align-items:center;gap:9px}
+.hr-btn:hover{filter:brightness(1.12)}
+.hr-btn .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
+.hr-ov{position:fixed;inset:0;z-index:950;background:rgba(2,2,10,.78);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px}
+.hr-ov.open{display:flex}
+.hr-box{position:relative;width:100%;max-width:640px;max-height:90vh;overflow-y:auto;background:#0a0a1c;border:1px solid var(--border-p);padding:36px 36px 30px;color:var(--text)}
+.hr-x{position:absolute;top:12px;right:14px;background:none;border:0;color:#c3ccd9;font-size:26px;cursor:pointer;line-height:1}
+.hr-k{font-family:'Space Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.16em;color:#93c5fd;text-transform:uppercase;margin:22px 0 8px}
+.hr-k:first-of-type{margin-top:0}
+.hr-name{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:34px;line-height:1.05}
+.hr-role{color:#c084fc;font-weight:600;font-size:16px;margin-top:4px}
+.hr-box p,.hr-box li{font-size:15px;line-height:1.6;color:#c3ccd9}
+.hr-box ul{list-style:none;padding:0;margin:0}
+.hr-box li{padding-left:18px;position:relative;margin-bottom:6px}
+.hr-box li::before{content:'▸';position:absolute;left:0;color:#a855f7;font-size:12px;top:2px}
+.hr-box b{color:#f1f5f9}
+.hr-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.hr-fact{border:1px solid var(--border-b);padding:12px 14px}
+.hr-fact .n{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:26px;background:linear-gradient(135deg,#a855f7,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hr-fact .t{font-size:13.5px;color:#c3ccd9;line-height:1.45}
+.hr-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hr-acts a{font-family:'Space Mono',monospace;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-decoration:none;padding:11px 16px;border:1px solid var(--border-p);color:#e2e8f0}
+.hr-acts a.pri{background:linear-gradient(135deg,#7c3aed,#2563eb);border-color:transparent;color:#fff}
+@media(max-width:600px){.hr-box{padding:30px 20px 22px}.hr-facts{grid-template-columns:1fr}.hr-btn{right:16px;bottom:16px;padding:11px 15px;font-size:11.5px}.hr-long{display:none}}
+
+/* ─── HR CTA v7 ─── */
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:36px;position:relative;z-index:2}
+.hero-hr{font-family:'Space Mono',monospace;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#7c3aed,#2563eb);border:0;padding:16px 28px;cursor:pointer;display:flex;align-items:center;gap:10px;animation:hrPulse 2.4s ease-in-out infinite}
+.hero-hr:hover{filter:brightness(1.15)}
+.hero-hr .dot,.nav-hr::before{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;display:inline-block}
+@keyframes hrPulse{0%,100%{box-shadow:0 0 18px rgba(124,58,237,.45)}50%{box-shadow:0 0 38px rgba(124,58,237,.85),0 0 60px rgba(37,99,235,.35)}}
+.hero-cv{font-family:'Space Mono',monospace;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e2e8f0;text-decoration:none;border:1px solid var(--border-p);padding:15px 26px}
+.hero-cv:hover{background:rgba(124,58,237,.15)}
+.nav-hr{background:linear-gradient(135deg,#7c3aed,#2563eb) !important;color:#fff !important;padding:7px 16px !important;display:inline-flex !important;align-items:center;gap:8px}
+.nav-hr::before{content:'';width:7px;height:7px}
+.hr-btn{opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .3s;bottom:90px}
+.hr-btn.show{opacity:1;pointer-events:auto;transform:none}
+@media(prefers-reduced-motion:reduce){.hero-hr{animation:none}}
+@media(max-width:600px){.hero-hr,.hero-cv{width:100%;justify-content:center;text-align:center;font-size:13px}.hr-btn{bottom:20px}}
+@media(max-width:600px){.hero-stats{display:grid;grid-template-columns:1fr 1fr;width:100%;margin-top:32px}.hero-stat{padding:14px 8px;border-right:1px solid var(--border-p);border-bottom:1px solid var(--border-p)}.hero-stat:nth-child(2n){border-right:none}.hero-stat:nth-child(n+3){border-bottom:none}.hero-stat-num{font-size:28px}.hero-ctas{margin-top:24px;width:100%}}
 </style>
 </head>
 <body>
@@ -838,7 +909,8 @@ footer em{color:var(--p2);font-style:normal}
     <li><a href="#exp">Experience</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="Kira_Generalskaya_CV.pdf" download>CV</a></li>
+    <li><a href="https://nikkyred.github.io/kiragen/Kira_Generalskaya_CV.pdf" download>CV</a></li>
+    <li><a href="#hr" class="nav-hr hr-open">For HR</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
@@ -857,7 +929,7 @@ footer em{color:var(--p2);font-style:normal}
   </div>
 
   <div class="hero-roles">
-    Social Strategy <em>/</em> Analytics <em>/</em> Multi-Platform Growth
+    Social Strategy <em>/</em> Product-led Content <em>/</em> Analytics <em>/</em> Team Building
   </div>
 
   <div class="hero-stats">
@@ -879,6 +951,11 @@ footer em{color:var(--p2);font-style:normal}
     </div>
   </div>
 
+  <div class="hero-ctas">
+    <button class="hero-hr hr-open"><span class="dot"></span>For HR · 30-sec summary</button>
+    <a class="hero-cv" href="https://nikkyred.github.io/kiragen/Kira_Generalskaya_CV.pdf" download>Download CV ↓</a>
+  </div>
+
   <div class="hero-scroll">
     <div class="scroll-arrow"></div>
     <div class="scroll-arrow-2"></div>
@@ -891,11 +968,11 @@ footer em{color:var(--p2);font-style:normal}
 <div class="section" id="about">
   <div class="s-title rv"><span class="w">ABOUT </span><span class="g">ME</span></div>
   <p class="about-bio rv d1">
-    Based in <strong>Belgrade, Serbia</strong>. Following crypto since 2017, working in Web3 professionally since 2022, 6 years in digital marketing overall. I build and lead social media functions for crypto and gamedev products at scale – from strategy architecture to team management and measurable business results.<br><br>
-    My approach is analytics-first: I work with hypotheses, test against data, and adjust based on what actually performs. At Blum, one content post drove <em>300K+ new wallet connections</em> directly attributed to the campaign. I've led teams of <em>5–10 people</em>, run cross-regional operations across <strong>Global and CIS markets – Turkey, Brazil, Africa, Asia, and beyond</strong>, and operated across a combined social footprint of <em>30M+ followers</em> on a single project.
+    Based in <strong>Belgrade, Serbia</strong>. Following crypto since 2017, working in Web3 professionally since 2022, 6 years in digital marketing overall. I build social functions as <em>systems, not just feeds</em>: I take an unstructured communication setup, understand the product and the market, shape the narrative, and turn it into a multi-platform operation with clear processes, a team and measurable impact.<br><br>
+    I connect product, audience, content, distribution and analytics. At Blum, one educational post drove <em>300K+ new wallet connections</em>; at Dlicom, I built the whole social function from zero across 10 platforms and the founder's personal brand. I've led teams of <em>5–10 people</em>, run regional operations across <strong>Turkey, Brazil, Africa, Asia and CIS</strong>, and worked on a footprint of <em>30M+ followers</em> on a single project. I stay hands-on: I can write the thread, brief the visual and edit the video myself.
   </p>
   <p class="about-bio rv d1" style="margin-top:-8px">
-    <strong>What I'm looking for:</strong> a product I believe in and a role where scope, responsibility and pay line up. I'm equally comfortable leading a team or owning channels hands-on – the product matters more to me than the title. I measure my work by one thing: whether the business grows, because when the business does well, so do I.
+    <strong>What I'm looking for:</strong> a Head / Lead / Senior role in social, content or Web3 marketing – open to product-marketing-adjacent roles too – with a product I believe in, where scope, responsibility and pay line up. I'm equally comfortable leading a team or owning channels hands-on – the product matters more to me than the title. I measure my work by one thing: whether the business grows, because when the business does well, so do I.
   </p>
   <div class="about-grid rv d2">
     <div class="about-cell">
@@ -925,18 +1002,33 @@ footer em{color:var(--p2);font-style:normal}
   <div class="why-grid">
     <div class="why-card gcard rv">
       <div class="why-n">01</div>
-      <h3>Analytics-driven, not intuition-driven</h3>
-      <p>I build content strategies around <em>hypotheses and data</em> – test, measure, adjust. One campaign at Blum drove <em>300K+ new wallet connections</em>. That's the kind of result that comes from treating SMM as a growth function, not a content calendar.</p>
+      <h3>I build the function, not just the feed</h3>
+      <p>Dlicom, Hashcats, Donot – each started from zero. Strategy, <em>operating model, playbooks, reporting rhythm</em>, hiring and onboarding, and taking channels in-house from agencies when that works better.</p>
     </div>
     <div class="why-card gcard rv d1">
       <div class="why-n">02</div>
-      <h3>Team & budget management</h3>
-      <p>Led teams of <em>5–10 people</em> across multiple markets. Managed campaign budgets up to <em>$10K/month</em>. Global and CIS operations – Turkey, Brazil, Africa, Asia, and Russian-speaking markets – one coherent strategy, locally adapted.</p>
+      <h3>Content that moves the product</h3>
+      <p>One Blum post drove <em>300K+ wallet connections</em>; CoinMarketCap views grew <em>7.7×</em> after a product-led rework. I measure follower quality, CTR, registrations and inbound interest – not only reach.</p>
     </div>
     <div class="why-card gcard rv d2">
       <div class="why-n">03</div>
-      <h3>Crypto-native since 2017</h3>
-      <p>Web3 isn't a vertical I'm learning – I've followed the market since 2017 and built inside it since 2022. <em>Product cycles, market sentiment, launch dynamics</em> – I know the context before the brief arrives.</p>
+      <h3>Global strategy, local execution</h3>
+      <p>Led <em>5–10 people</em>, including regional managers for Turkey, Brazil, Africa, Asia and CIS. Wrote regional playbooks with localization rules – up to China's WeChat and Weibo. Budgets up to <em>$10K/month</em>.</p>
+    </div>
+    <div class="why-card gcard rv">
+      <div class="why-n">04</div>
+      <h3>AI-augmented, fact-checked</h3>
+      <p>I designed an <em>AI-assisted content system</em> with brand and tone rules, platform specs and quality checks – and a fact-checking routine, so only <em>verified numbers and product claims</em> go public.</p>
+    </div>
+    <div class="why-card gcard rv d1">
+      <div class="why-n">05</div>
+      <h3>Calm under pressure</h3>
+      <p>Wrote Blum's <em>post-TGE anti-crisis and retention strategy</em>. Transparent response frameworks and escalation logic – no fake engagement, no artificial loyalty.</p>
+    </div>
+    <div class="why-card gcard rv d2">
+      <div class="why-n">06</div>
+      <h3>Crypto-native with product thinking</h3>
+      <p>In the market since 2017, building inside it since 2022. Positioning, messaging and launch comms are part of my job – and at Blum I authored <em>product and retention concepts</em> beyond social.</p>
     </div>
   </div>
 </div>
@@ -959,9 +1051,11 @@ footer em{color:var(--p2);font-style:normal}
         <ul class="exp-ul">
           <li>Built the social function from zero in the first weeks: SMM strategy, Tone of Voice, community management strategy, operating model, content calendar and analytics; initiated the move of the whole SMM workflow from ClickUp to Notion</li>
           <li>Own the brand strategy and voice across all <b>10 platforms</b> – X, Telegram, Discord, Instagram, Facebook, LinkedIn, TikTok, YouTube, Binance Square, CoinMarketCap – plus the <b>founder's personal brand</b> on X and LinkedIn: strategy presented to the CEO, ongoing ghostwriting</li>
-          <li>Lead the people around social: onboarded and run the reply-marketing specialist, ran the hiring funnel for content contributors (40+ applicants, test assignment), wrote the playbook for 6 regional X accounts. Oversaw the external agency on CoinMarketCap and Binance Square at launch, then took both channels fully in-house</li>
-          <li>Analytics as a decision tool: weekly and monthly reports, audience research and audits of X content, reply marketing and cross-platform funnel, turned into a Q4 implementation plan</li>
-          <li>Results: CoinMarketCap views per post <b>~1.3K → ~10K</b> after a product-led rework, no paid distribution; Telegram AMA <b>+306 subscribers in a day</b>; <b>+146% X impressions</b> in the first month with zero paid budget</li>
+          <li>Lead the people around social: onboarded and run the reply-marketing specialist, ran the hiring funnel for content contributors (40+ applicants, test assignment), wrote the playbook for 6 regional X accounts and a multi-region localization framework (incl. China: WeChat, Weibo). Oversaw the external agency on CoinMarketCap and Binance Square at launch, then took both channels fully in-house</li>
+          <li>Gave every platform its own job: X for product narrative and takes, LinkedIn for expertise and trust, Telegram for depth and retention; changed cadence and formats only when engagement and retention signals stayed stable</li>
+          <li>Analytics as a decision tool: weekly and monthly reports, audience research and audits of X content, reply marketing and cross-platform funnel, turned into a Q4 implementation plan; success measured beyond vanity metrics – follower quality, CTR/UTM traffic, registrations, mission performance, brand mentions and inbound partner interest</li>
+          <li>Designed an <b>AI-assisted content system</b> for the team – brand and tone rules, platform specs, quality checks – plus a fact-checking routine: only verified numbers and product claims go public</li>
+          <li>Results: CoinMarketCap views per post <b>~1.3K → ~10K</b> after a product-led rework, no paid distribution; Telegram AMA <b>+459 subscribers</b>, average post views ~90 → ~600; <b>+146% X impressions</b> in the first month with zero paid budget</li>
         </ul>
       </div>
     </div>
@@ -971,12 +1065,13 @@ footer em{color:var(--p2);font-style:normal}
       <div class="exp-date">Jun 2025<br>Sep 2026</div>
       <div class="exp-content">
         <div class="exp-role">Strategic SMM Consulting</div>
-        <div class="exp-co">Multiple Web3 Teams · Remote · Freelance · Clients under NDA</div>
+        <div class="exp-co">Multiple Web3 Teams · Remote · Freelance · Clients incl. Input Global / WeFi and Cointelegraph (agency side), others under NDA</div>
         <ul class="exp-ul">
           <li>Social media strategy and execution for several Web3 teams in parallel – crypto, DeFi, and founder personal brands</li>
+          <li>Founder and executive branding: thought-leadership content, distribution and amplification systems for company leaders</li>
           <li>End-to-end brand systems: positioning, narrative architecture, tone of voice, scalable content models</li>
           <li>Analytics-first frameworks tracking engagement, reach, follower quality, and inbound business impact</li>
-          <li>Hypothesis-driven content cycles: test formats, measure performance, iterate based on data</li>
+          <li>Consulting format: audit of the current setup → hypotheses → system → measurement → iteration</li>
         </ul>
       </div>
     </div>
@@ -988,10 +1083,10 @@ footer em{color:var(--p2);font-style:normal}
         <div class="exp-role">Growth Marketing Manager</div>
         <div class="exp-co">ACSG · Montenegro</div>
         <ul class="exp-ul">
-          <li>End-to-end brand growth: paid placements, influencer marketing, partnerships – one unified system</li>
-          <li>Influencer/creator campaigns full cycle: outreach, negotiations, briefing, publishing, post-campaign analysis</li>
           <li>Strategic partnerships and cross-brand collaborations expanding reach and unlocking new channels</li>
           <li>Founder communication aligned with product launches, GTM narratives, and brand positioning</li>
+          <li>Brand growth as one system: partnerships, paid placements and creator campaigns planned together, not in silos</li>
+          <li>Creator campaigns end to end, from briefing to post-campaign analysis</li>
         </ul>
       </div>
     </div>
@@ -1003,11 +1098,12 @@ footer em{color:var(--p2);font-style:normal}
         <div class="exp-role">SMM Manager</div>
         <div class="exp-co">Blum · Dubai · Full-time</div>
         <ul class="exp-ul">
-          <li>Ran social strategy for an ecosystem with <b>30M+ followers</b> across Telegram, X, LinkedIn, Facebook and Instagram; led a team of <b>5+ people</b>, including regional managers for Turkey, Brazil, Africa, Asia and CIS</li>
+          <li>Ran social strategy for an ecosystem with <b>30M+ followers</b> across Telegram, X, LinkedIn, Facebook and Instagram; led a team of <b>5+ people</b>, including regional managers for Turkey, Brazil, Africa, Asia and CIS – adapted the global strategy to each market and reviewed regional content and performance</li>
           <li>One educational Telegram post (2M views) tied to the Trump-token hype drove <b>300K+ new wallet connections</b> to Memepad through a soft CTA</li>
           <li>Wrote launch comms for key releases: Solana trading thread (<b>1.9M views</b>, 18K likes), Blum × BNB Chain campaign (<b>1.1M views</b>), Solana support (707K); community posts on Telegram regularly reached <b>1.4–2M views</b></li>
           <li>Built the Donot channel voice solo – <b>763K subscribers</b>, ~1.5% average engagement rate</li>
           <li>Hosted AMA livestreams with a <b>15,000+ viewer peak</b>; managed $10K/month campaign budgets; wrote the user retention strategy and designed in-app events with product analysts</li>
+          <li>Wrote the post-TGE anti-crisis and retention strategy, and authored product and retention concepts for the team – token utility, transparency, governance and community mechanics</li>
         </ul>
       </div>
     </div>
@@ -1020,8 +1116,9 @@ footer em{color:var(--p2);font-style:normal}
         <div class="exp-co">GOTBIT Hedge Fund · Lisbon · Full-time contract</div>
         <ul class="exp-ul">
           <li>Ran social for GOTBIT portfolio projects, including <b>BabyDoge</b>, KicksPad and Prediction Game, plus content support for Wirex Pay Chain and Nereus Finance</li>
+          <li>Market and competitor research, audience analysis, positioning and messaging for each project; GTM and launch communication support</li>
           <li>Built channel strategies across X, Telegram, YouTube, Medium, Discord, Facebook and TikTok – one voice per project, adapted per platform</li>
-          <li>Managed ad budgets on ROI: every placement tracked with UTM tags and social analytics</li>
+          <li>Managed ad budgets on ROI: every placement tracked with UTM tags; campaign analytics, partnerships and product offers adjusted to market response</li>
           <li>Produced content end-to-end – scripts, visual direction and post-production in Photoshop and Final Cut Pro</li>
         </ul>
       </div>
@@ -1036,6 +1133,7 @@ footer em{color:var(--p2);font-style:normal}
         <ul class="exp-ul">
           <li>Launched Hashcats from zero and grew it to <b>50K+ members</b>: brand voice, content system and community mechanics built from scratch</li>
           <li>Created a meme-native tone of voice for Choise ecosystem projects with strong organic traction and retention</li>
+          <li>Turned product features and value propositions into clear user-facing narratives: positioning, messaging and audience segmentation as part of launches</li>
           <li>Ran communication around several token launches – campaigns, AMA sessions and platform-native activations across X, Telegram and Discord</li>
           <li>Set up the internal process for content planning, scheduling and analytics</li>
         </ul>
@@ -1100,9 +1198,9 @@ footer em{color:var(--p2);font-style:normal}
         <div class="pow-platform">X.com</div>
       </div>
       <a href="https://t.me/DlicomAppOfficial" target="_blank" class="pow-card gcard gcard-b">
-        <div class="pow-num">+306</div>
-        <div class="pow-label">Telegram subscribers in a day</div>
-        <div class="pow-desc">Product-update AMA with the CTO and Product Owner: campaign owner end-to-end. Views per post ~90 → ~625, peak 157 live</div>
+        <div class="pow-num">+459</div>
+        <div class="pow-label">Telegram subscribers from one AMA</div>
+        <div class="pow-desc">Product-update AMA with the CTO and Product Owner: campaign owner end-to-end. Average views per post ~90 → ~598, peak 157 live</div>
         <div class="pow-platform">Telegram</div>
       </a>
       <a href="https://coinmarketcap.com/community/profile/DlicomApp/" target="_blank" class="pow-card gcard gcard-b">
@@ -1283,6 +1381,9 @@ footer em{color:var(--p2);font-style:normal}
         <span class="tag">Cross-Regional Operations</span>
         <span class="tag">Agency &amp; Contractor Management</span>
         <span class="tag">Hiring &amp; Onboarding</span>
+        <span class="tag">AI Content Operations</span>
+        <span class="tag">Fact-checking &amp; Claims Control</span>
+        <span class="tag">Positioning &amp; GTM Messaging</span>
       </div>
     </div>
     <div class="skills-card gcard gcard-b rv d1">
@@ -1290,7 +1391,7 @@ footer em{color:var(--p2);font-style:normal}
       <div class="tool-rows">
         <div class="tool-row">
           <div class="tool-lbl">Platforms</div>
-          <div class="tool-val">Facebook · Instagram · YouTube · TikTok · Telegram · LinkedIn · X · Reddit · Discord</div>
+          <div class="tool-val">X · Telegram · Discord · LinkedIn · Facebook · Instagram · TikTok · YouTube · Medium · Binance Square · CoinMarketCap · Reddit</div>
         </div>
         <div class="tool-row">
           <div class="tool-lbl">Analytics</div>
@@ -1302,11 +1403,11 @@ footer em{color:var(--p2);font-style:normal}
         </div>
         <div class="tool-row">
           <div class="tool-lbl">Project Mgmt</div>
-          <div class="tool-val">Notion · Jira · Trello · Confluence</div>
+          <div class="tool-val">Notion · ClickUp · Jira · Trello · Confluence</div>
         </div>
         <div class="tool-row">
           <div class="tool-lbl">AI</div>
-          <div class="tool-val">Claude · ChatGPT · Midjourney</div>
+          <div class="tool-val">Claude · ChatGPT · Midjourney · custom AI content workflows (rules, platform specs, quality checks)</div>
         </div>
       </div>
     </div>
@@ -1350,7 +1451,7 @@ footer em{color:var(--p2);font-style:normal}
   <div class="contact-links">
     <a href="mailto:kira.generalskaya.inn@gmail.com" class="c-link">[ EMAIL ]</a>
     <a href="https://www.linkedin.com/in/kira-generalskaya" target="_blank" class="c-link">[ LINKEDIN ]</a>
-    <a href="Kira_Generalskaya_CV.pdf" download class="c-link">[ DOWNLOAD CV ]</a>
+    <a href="https://nikkyred.github.io/kiragen/Kira_Generalskaya_CV.pdf" download class="c-link">[ DOWNLOAD CV ]</a>
   </div>
 </section>
 
@@ -1419,6 +1520,53 @@ const contactOb = new IntersectionObserver(entries => {
   });
 }, {threshold: 0.3});
 contactOb.observe(contactEl);
+</script>
+
+<button class="hr-btn" id="hrBtn" aria-haspopup="dialog"><span class="dot"></span>For HR<span class="hr-long"> · 30-sec summary</span></button>
+<div class="hr-ov" id="hrOv" role="dialog" aria-modal="true" aria-label="Summary for recruiters">
+  <div class="hr-box">
+    <button class="hr-x" id="hrX" aria-label="Close">×</button>
+    <div class="hr-k">Candidate</div>
+    <div class="hr-name">Kira Generalskaya</div>
+    <div class="hr-role">Global Head of Social Media · Web3 &amp; SocialFi</div>
+    <div class="hr-k">Looking for</div>
+    <p><b>Head / Lead / Senior</b> roles in social, content or Web3 marketing. Product-marketing-adjacent roles welcome. <b>Remote</b>, based in Belgrade, Serbia (CET).</p>
+    <div class="hr-k">In short</div>
+    <p>6 years in digital marketing, Web3 since 2022. I build the social function from zero: strategy, tone of voice, operating model, analytics, hiring and team of 5–10 people across regions. Hands-on when needed.</p>
+    <div class="hr-k">Key results</div>
+    <div class="hr-facts">
+      <div class="hr-fact"><div class="n">300K+</div><div class="t">wallet connections from one educational post (Blum)</div></div>
+      <div class="hr-fact"><div class="n">30M+</div><div class="t">follower ecosystem, team across 5 regions (Blum)</div></div>
+      <div class="hr-fact"><div class="n">7.7×</div><div class="t">CoinMarketCap views per post, organic (Dlicom)</div></div>
+      <div class="hr-fact"><div class="n">+146%</div><div class="t">X impressions in month one, zero paid budget (Dlicom)</div></div>
+    </div>
+    <div class="hr-k">Strengths</div>
+    <ul>
+      <li>Social as a system: product, audience, content, distribution and analytics in one model</li>
+      <li>AI-assisted content operations with a fact-checking routine</li>
+      <li>Launch and crisis communication, incl. post-TGE strategy</li>
+      <li>Russian native, English professional</li>
+    </ul>
+    <div class="hr-acts">
+      <a class="pri" href="https://nikkyred.github.io/kiragen/Kira_Generalskaya_CV.pdf" download>Download CV</a>
+      <a href="mailto:kira.generalskaya.inn@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/kira-generalskaya" target="_blank">LinkedIn</a>
+      <a href="#exp" id="hrFull">Full experience ↓</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){var o=document.getElementById('hrOv'),b=document.getElementById('hrBtn');
+function op(){o.classList.add('open');document.body.style.overflow='hidden'}
+function cl(){o.classList.remove('open');document.body.style.overflow=''}
+b.addEventListener('click',op);
+document.querySelectorAll('.hr-open').forEach(function(x){x.addEventListener('click',function(e){e.preventDefault();op()})});
+var cta=document.querySelector('.hero-ctas');
+if('IntersectionObserver' in window&&cta){new IntersectionObserver(function(en){b.classList.toggle('show',!en[0].isIntersecting)}).observe(cta)}else{b.classList.add('show')}
+if(location.hash==='#hr')op();document.getElementById('hrX').addEventListener('click',cl);
+document.getElementById('hrFull').addEventListener('click',cl);
+o.addEventListener('click',function(e){if(e.target===o)cl()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')cl()});})();
 </script>
 </body>
 </html>
